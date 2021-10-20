@@ -1,12 +1,12 @@
 import React from 'react';
 import {StyleSheet, View, Image} from 'react-native';
 
-import searchIcon from '../assets/icons/search.png';
-import inviteIcon from '../assets/icons/invite.png';
-import calendarIcon from '../assets/icons/calendar.png';
-import notificationIcon from '../assets/icons/notification.png';
+import searchIcon from '../../../assets/icons/search.png';
+import inviteIcon from '../../../assets/icons/invite.png';
+import calendarIcon from '../../../assets/icons/calendar.png';
+import notificationIcon from '../../../assets/icons/notification.png';
 
-import person0Image from '../assets/images/person0.jpg';
+import person0Image from '../../../assets/images/person0.jpg';
 
 export default function AppBarComponent() {
   return (
