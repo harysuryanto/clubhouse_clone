@@ -7,25 +7,35 @@ import person3Image from '../../../assets/images/person3.png';
 import person4Image from '../../../assets/images/person4.png';
 import person5Image from '../../../assets/images/person5.png';
 
-export default class RoomComponent extends Component {
-  render() {
-    return (
-      <RoomGroup>
-        <TouchableOpacity>
-          <RoomItem />
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <RoomItem />
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <RoomItem />
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <RoomItem />
-        </TouchableOpacity>
-      </RoomGroup>
-    );
-  }
+export default function RoomComponent(props) {
+  return (
+    <RoomGroup>
+      <TouchableOpacity
+        onPress={() => {
+          props.navigation.navigate('Room');
+        }}>
+        <RoomItem />
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          props.navigation.navigate('Room');
+        }}>
+        <RoomItem />
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          props.navigation.navigate('Room');
+        }}>
+        <RoomItem />
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          props.navigation.navigate('Room');
+        }}>
+        <RoomItem />
+      </TouchableOpacity>
+    </RoomGroup>
+  );
 }
 
 const RoomGroup = props => {
@@ -122,7 +132,12 @@ const roomItemStyles = StyleSheet.create({
     shadowRadius: 1,
 
     // Android only
-    elevation: 10,
+    elevation: 1,
+
+    // Additional style
+    borderWidth: 0.2,
+    borderBottomWidth: 2,
+    borderColor: '#D0CCBF',
   },
   roomTitle: {
     fontWeight: 'bold',

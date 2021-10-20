@@ -11,9 +11,7 @@ export default class AllRoomsPage extends Component {
     return (
       <View style={styles.container}>
         {/* App bar */}
-        <View style={styles.appBar}>
-          <AppBarComponent />
-        </View>
+        <AppBarComponent />
 
         {/* Body */}
         <View style={styles.body}>
@@ -22,7 +20,7 @@ export default class AllRoomsPage extends Component {
             <ScheduleComponent />
 
             {/* All Rooms */}
-            <RoomComponent />
+            <RoomComponent navigation={this.props.navigation} />
 
             {/* Space */}
             <View style={{height: 80}} />
@@ -45,10 +43,6 @@ const styles = StyleSheet.create({
     position: 'relative',
     backgroundColor: '#F1EFE5',
     // alignContent: 'stretch',
-  },
-  appBar: {
-    padding: 30,
-    // backgroundColor: 'green',
   },
   body: {
     flex: 1,

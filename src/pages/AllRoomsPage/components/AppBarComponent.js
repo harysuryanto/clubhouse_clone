@@ -1,16 +1,19 @@
 import React from 'react';
-import {StyleSheet, View, Image} from 'react-native';
+import {StyleSheet, View, Image, StatusBar} from 'react-native';
 
 import searchIcon from '../../../assets/icons/search.png';
 import inviteIcon from '../../../assets/icons/invite.png';
 import calendarIcon from '../../../assets/icons/calendar.png';
 import notificationIcon from '../../../assets/icons/notification.png';
 
-import person0Image from '../../../assets/images/person0.jpg';
+import person6Image from '../../../assets/images/person6.jpg';
 
 export default function AppBarComponent() {
   return (
     <View style={appBarStyles.container}>
+      {/* Status bar */}
+      <StatusBar backgroundColor="#F1EFE5" barStyle="dark-content" />
+
       {/* Left side */}
       <View style={appBarStyles.leftSide}>
         <Image source={searchIcon} style={appBarStyles.icon} />
@@ -41,7 +44,7 @@ export default function AppBarComponent() {
             }}
           />
         </View>
-        <Image source={person0Image} style={appBarStyles.myProfilePicture} />
+        <Image source={person6Image} style={appBarStyles.myProfilePicture} />
       </View>
     </View>
   );
@@ -49,13 +52,13 @@ export default function AppBarComponent() {
 
 const appBarStyles = StyleSheet.create({
   container: {
-    flex: 1,
+    // flex: 1,
     flexWrap: 'nowrap',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    // marginBottom: 20,
-    // padding: 16,
-    // backgroundColor: 'grey',
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    backgroundColor: '#F1EFE5',
   },
   leftSide: {
     // backgroundColor: 'lightblue',
