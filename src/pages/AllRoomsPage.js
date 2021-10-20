@@ -106,7 +106,7 @@ const scheduleItemStyles = StyleSheet.create({
     textAlign: 'right',
     fontWeight: 'bold',
     color: '#6E664E',
-    fontSize: 11,
+    fontSize: 14,
   },
   loungeContainer: {
     flexDirection: 'row',
@@ -114,7 +114,7 @@ const scheduleItemStyles = StyleSheet.create({
     // backgroundColor: 'pink',
   },
   loungeTitle: {
-    fontSize: 9,
+    fontSize: 10,
     textTransform: 'uppercase',
     color: '#333333',
   },
@@ -125,7 +125,7 @@ const scheduleItemStyles = StyleSheet.create({
   },
   roomTitle: {
     fontWeight: 'bold',
-    fontSize: 12,
+    fontSize: 15,
     color: '#333333',
   },
 });
@@ -229,16 +229,16 @@ const roomItemStyles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 20,
     color: '#333333',
-    fontSize: 14,
+    fontSize: 18,
   },
   participantName: {
-    fontWeight: 'bold',
+    // fontWeight: 'bold',
     color: '#333333',
-    fontSize: 12,
+    fontSize: 17,
   },
   numberParticipantsAndChats: {
     color: '#999999',
-    fontSize: 12,
+    fontSize: 16,
   },
 });
 
