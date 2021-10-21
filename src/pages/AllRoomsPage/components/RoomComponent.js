@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
+import speechIcon from '../../../assets/icons/speech.png';
+import speechSolidIcon from '../../../assets/icons/speech-solid.png';
+import personSolidIcon from '../../../assets/icons/person-solid.png';
+
 import person1Image from '../../../assets/images/person1.png';
 import person2Image from '../../../assets/images/person2.png';
 import person3Image from '../../../assets/images/person3.png';
@@ -96,18 +100,70 @@ const RoomItem = () => {
         {/* Participants List */}
         <View>
           <View>
-            <Text style={roomItemStyles.participantName}>
-              Andrey Anashkin 💬
-            </Text>
-            <Text style={roomItemStyles.participantName}>Jakob Povey 💬</Text>
-            <Text style={roomItemStyles.participantName}>Petr Kalyanov 💬</Text>
-            <Text style={roomItemStyles.participantName}>Thomas Mendoza</Text>
-            <Text style={roomItemStyles.participantName}>Shabaz Garrison</Text>
+            <View style={roomItemStyles.participantNameContainer}>
+              <Text style={roomItemStyles.participantNameText}>
+                Andrey Anashkin
+              </Text>
+              <Image
+                source={speechIcon}
+                style={roomItemStyles.participantNameIcon}
+              />
+            </View>
+            <View style={roomItemStyles.participantNameContainer}>
+              <Text style={roomItemStyles.participantNameText}>
+                Jakob Povey
+              </Text>
+              <Image
+                source={speechIcon}
+                style={roomItemStyles.participantNameIcon}
+              />
+            </View>
+            <View style={roomItemStyles.participantNameContainer}>
+              <Text style={roomItemStyles.participantNameText}>
+                Petr Kalyanov
+              </Text>
+              <Image
+                source={speechIcon}
+                style={roomItemStyles.participantNameIcon}
+              />
+            </View>
+            <View style={roomItemStyles.participantNameContainer}>
+              <Text style={roomItemStyles.participantNameText}>
+                Thomas Mendoza
+              </Text>
+            </View>
+            <View style={roomItemStyles.participantNameContainer}>
+              <Text style={roomItemStyles.participantNameText}>
+                Shabaz Garrison
+              </Text>
+            </View>
           </View>
-          <View>
-            <Text style={roomItemStyles.numberParticipantsAndChats}>
+          <View style={roomItemStyles.numberParticipantsAndChatsContainer}>
+            {/* <Text style={roomItemStyles.numberParticipantsAndChatsText}>
               126 👨‍👩‍👦 / 26 💬
+            </Text> */}
+            <Text style={roomItemStyles.numberParticipantsAndChatsText}>
+              126
             </Text>
+            <Image
+              source={personSolidIcon}
+              style={roomItemStyles.numberParticipantsAndChatsIcon}
+            />
+            <Text
+              style={[
+                roomItemStyles.numberParticipantsAndChatsText,
+                {margin: 0},
+              ]}>
+              {' '}
+              /{' '}
+            </Text>
+            <Text style={roomItemStyles.numberParticipantsAndChatsText}>
+              26
+            </Text>
+            <Image
+              source={speechSolidIcon}
+              style={roomItemStyles.numberParticipantsAndChatsIcon}
+            />
           </View>
         </View>
       </View>
@@ -145,13 +201,34 @@ const roomItemStyles = StyleSheet.create({
     color: '#333333',
     fontSize: 18,
   },
-  participantName: {
+  participantNameContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    // backgroundColor: 'lightblue',
+  },
+  participantNameText: {
     // fontWeight: 'bold',
     color: '#333333',
     fontSize: 17,
+    marginRight: 5,
   },
-  numberParticipantsAndChats: {
+  participantNameIcon: {
+    width: 17,
+    height: 17,
+  },
+  numberParticipantsAndChatsContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    // backgroundColor: 'lightgreen',
+  },
+  numberParticipantsAndChatsText: {
     color: '#999999',
     fontSize: 16,
+    // fontWeight: 'bold',
+    marginRight: 5,
+  },
+  numberParticipantsAndChatsIcon: {
+    width: 16,
+    height: 16,
   },
 });
